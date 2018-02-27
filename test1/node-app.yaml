@@ -46,7 +46,7 @@ metadata:
 # For more info about Pods see:
 #   https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -56,7 +56,7 @@ spec:
       containers:
       - name: bookshelf-app
         # TODO: Replace [YOUR_PROJECT_ID] with your project ID.
-        image: gcr.io/iface-195511/node-jen-test:v2
+        image: gcr.io/iface-195511/node-jen-test:v4
        # command: ["app"]
         # This setting makes nodes pull the docker image every time before
         # starting the pod. This is useful when debugging, but should be turned
@@ -65,4 +65,4 @@ spec:
         # The bookshelf process listens on port 8080 for web traffic by default.
         ports:
         - name: http-server
-          containerPort: 8080
+          containerPort: 80
