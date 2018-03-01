@@ -11,7 +11,7 @@
      app: my-app
    ports:
      - protocol: TCP
-       port: 90
-       targetPort: 90
+       port: 80
+       targetPort: 80
        name: my-app-ui
 #[END my-app service]
