@@ -1,0 +1,17 @@
+#[START my-app service]
+---
+  kind: Service
+  apiVersion: v1
+  metadata:
+    name: my-app
+    namespace: my-app
+  spec:
+   type: NodePort
+   selector:
+     app: my-app
+   ports:
+     - protocol: TCP
+       port: 90
+       targetPort: 90
+       name: my-app-ui
+#[END my-app service]
